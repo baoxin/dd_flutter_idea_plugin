@@ -129,10 +129,13 @@ class AssetsYamlGenerateAction : MyAction() {
         val content = document.text
         val lines = content.lines().toMutableList()
         
-        // 查找 flutter: 部分
-        val flutterIndex = lines.indexOfFirst { it.trim().startsWith("flutter:") }
+        // 查找顶层的 flutter: 部分（不以空格或制表符开头）
+        val flutterIndex = lines.indexOfFirst {
+            val trimmed = it.trim()
+            trimmed.startsWith("flutter:") && !it.startsWith(" ") && !it.startsWith("\t")
+        }
         if (flutterIndex == -1) {
-            throw IllegalStateException("未找到 flutter: 配置部分")
+            throw IllegalStateException("未找到顶层 flutter: 配置部分")
         }
 
         // 查找或创建 assets: 部分
