@@ -1,7 +1,7 @@
 package codegen
 // 自动生成的插件信息类,不要修改这个文件,否则会导致插件功能失效
 object FlutterXPluginInfo {
-    const val VERSION: String = "5.7.0.251"
+    const val VERSION: String = "5.7.0.243"
     const val CHANGELOG: String = """
 <h2>5.7.0 - 2025-05-26</h2>
 

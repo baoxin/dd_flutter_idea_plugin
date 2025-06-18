@@ -165,6 +165,11 @@ tasks {
         }
     }
 
+    compileJava {
+        targetCompatibility = "21"
+        sourceCompatibility = "21"
+    }
+
     printProductsReleases {
         sinceBuild.set(sinceBuildVersion)
         untilBuild.set(untilBuildVersion)

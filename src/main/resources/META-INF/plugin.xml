@@ -172,11 +172,17 @@
         <action id="FlutterPubPackageSearch" class="shop.itbug.fluttercheckversionx.actions.FlutterPubPackageSearch"
                 text="搜索pub包">
         </action>
+        <action id="AssetsYamlGenerateAction"
+                class="shop.itbug.fluttercheckversionx.actions.AssetsYamlGenerateAction"
+        >
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="after"
+                          relative-to-action="ProjectViewPopupMenuSettingsGroup"/>
+        </action>
         <action id="AssetsAutoGenerateClassAction"
                 class="shop.itbug.fluttercheckversionx.actions.AssetsAutoGenerateClassAction"
         >
             <add-to-group group-id="ProjectViewPopupMenu" anchor="after"
-                          relative-to-action="ProjectViewPopupMenuSettingsGroup"/>
+                          relative-to-action="AssetsYamlGenerateAction"/>
         </action>
 
         <!--        打开设置-->
